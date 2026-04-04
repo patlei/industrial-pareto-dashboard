@@ -28,8 +28,10 @@ def set_matplot_zh_font():
 set_matplot_zh_font()
 
 # 初始化 DeepSeek 客户端 (兼容 OpenAI 格式)
+api_key = os.getenv("DEEPSEEK_API_KEY") or st.secrets.get("DEEPSEEK_API_KEY")
+
 client = OpenAI(
-    api_key=os.getenv("DEEPSEEK_API_KEY"),
+    api_key=api_key,
     base_url="https://api.deepseek.com"
 )
 
@@ -142,7 +144,7 @@ st.subheader("🤖 AI 专家智能诊断建议")
 head_defects = pareto_df[pareto_df['累计百分比'] <= 85]['缺陷类别'].tolist()
 
 if st.button("🚀 启动 DeepSeek 专家级归因分析", type="primary"):
-    if not os.getenv("DEEPSEEK_API_KEY"):
+    if not api_key:
         st.error("未检测到 API Key，请检查 .env 文件！")
     else:
         with st.spinner("AI 专家正在调取历史工艺库并分析当前趋势..."):
