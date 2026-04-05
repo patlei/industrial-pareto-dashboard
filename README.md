@@ -1,6 +1,6 @@
 # 🚀 工业产线缺陷智能归因看板 (Industrial AI Pareto Dashboard)
 
-本项目是针对 **AI Native 候选人笔试题** 开发的 MVP（最小可行性产品）。它通过结合传统的**帕累托分析（Pareto Analysis）**与 **DeepSeek 大语言模型**，实现了从底层数据采集到高层决策建议的自动化闭环。
+本项目是针对 **AI Native 候选人笔试题** 开发的 MVP（最小可行性产品）。它通过结合传统的帕累托分析（Pareto Analysis 与 **DeepSeek 大语言模型**，实现了从底层数据采集到高层决策建议的自动化闭环。
 
 ---
 
